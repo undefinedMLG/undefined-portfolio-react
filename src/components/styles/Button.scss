@@ -1,45 +1,81 @@
+
+@mixin lightTheme {
+&{
+  background-color: #F1F2F3;
+  .btn{
+    background-color:white;
+    &:hover{
+      background-color: #FF8F00;
+      color: white;
+      transition: background-color 0.2s ease;
+    }&:active {
+      background-color: #FF8F00;
+      color: white;
+      transition: background-color 0.2s ease;
+    }
+  }
+}
+.clr {
+  color:#252525;
+}
+.exp {
+ color: white;
+  background-color: #4B5EFC;
+}
+.op{
+  background-color: #D2D3DA;
+}
+}
+
+@mixin blackTheme {
+  &{
+    background-color: #17171C;
+    .btn{
+      background-color:#2E2F38;
+      color: white;
+      &:hover{
+        background-color: #FF8F00;
+        color: white;
+        transition: background-color 0.2s ease;
+      }&:active {
+        background-color: #FF8F00;
+        color: white;
+        transition: background-color 0.2s ease;
+      }
+    }
+  }
+  .clr {
+    color:#252525;
+    color: white;
+  }
+  .exp {
+   color: white;
+    background-color: #4B5EFC;
+  }
+  .op{
+    background-color: #4E505F;
+  }
+  }
+
 .show-btn {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  background-color: white;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding:20px;
+  padding-bottom:40px;
+  
+  @include lightTheme;
+ 
   .btn {
-    width: 60px;
-    height: 60px;
-    margin: 6px auto;
-    font-size: 24px;
+    width:72px;
+    height:72px;
+    margin:6px;
+    font-size:24px;
     font-weight: 500;
     cursor: pointer;
-    border-radius: 50%;
-    background: none;
+    border-radius: 24px;
     border: 0px;
-    &:last-child{
-      font-weight: medium;
-      font-size: 40px;
-      width: 110px;
-      height: 50px;
-      border-radius: 10px;
-      color: white;
-      background-color: #6dd5ed;
-    }&:hover{
-      background-color: #3993a7;
-      color: white;
-      transition: background-color 0.3s ease;
-    }&:active {
-      background-color: #48b1bf;
-      color: white;
-      transition: background-color 0.3s ease;
-    }
-  }
 
-  .clr {
-    color: #d66d75;
   }
-
-  .exp {
-    color: #06beb6;
-  }
-
 }

@@ -50,6 +50,7 @@ const Display = ({input, setInput, answer}) => {
           </>
         )}
       </div>
+      
     </>
   )
 }

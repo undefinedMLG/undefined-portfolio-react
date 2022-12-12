@@ -4,6 +4,7 @@ import "./styles/Calculator.scss";
 import Buttons from "./Button";
 import Display from "./Display";
 
+
 function Calculator() {
   const [input, setInput] = useState("")
   const [answer, setAnswer] = useState("")

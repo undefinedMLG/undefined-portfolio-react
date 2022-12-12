@@ -1,5 +1,16 @@
 import React from "react"; 
 import "./styles/Button.scss";
+import { createContext } from "react";
+
+export const themes = {
+  dark: "",
+  light: "white-content",
+};
+
+export const ThemeContext = createContext({
+    theme: themes.dark,
+  changeTheme: () => {},
+});
 
 const Buttons = ({
   inputHandler, 
@@ -16,13 +27,13 @@ const Buttons = ({
 
     return (
       <div className="show-btn">
-        <button className="btn clr" onClick={clearInput}>
-          AC
+        <button className="btn op" onClick={clearInput}>
+          C
         </button>
-        <button className="btn exp" onClick={changePlusMinus}>
+        <button className="btn op" onClick={changePlusMinus}>
           ±
         </button>
-        <button className="btn exp" onClick={inputHandler}>
+        <button className="btn op" onClick={inputHandler}>
           %
         </button>
         <button className="btn exp" onClick={inputHandler}>
@@ -64,7 +75,7 @@ const Buttons = ({
         <button className="btn exp" onClick={inputHandler}>
           +
         </button>
-        <button className="btn exp" onClick={inputHandler}>
+        <button className="btn" onClick={inputHandler}>
           .
         </button>
         <button className="btn" onClick={inputHandler}>
@@ -73,7 +84,7 @@ const Buttons = ({
         <button className="btn clr" onClick={backspace}>
           ⌫
         </button>
-        <button className="btn exp equal" id="equalbtn" onClick={calculateAns}>
+        <button className="btn exp" id="equalbtn" onClick={calculateAns}>
           =
         </button>
       </div>
