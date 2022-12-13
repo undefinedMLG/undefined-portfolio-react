@@ -7,6 +7,7 @@
   border-top-left-radius: 18px;
   border-top-right-radius: 18px;
   background:#F1F2F3;
+  min-height: 10rem;
 }
 .input,
 .value {
@@ -19,10 +20,11 @@
 }
 
 .input {
-  font-size: 96px;
+  font-size: 56px;
 }
 .value {
-  font-size: 18px;
+  font-size: 24px;
+  color: #919192;
 }
 .input::placeholder,
 .value::placeholder {

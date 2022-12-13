@@ -68,24 +68,6 @@ function Calculator() {
     }
   };
 
-  // check brackets are balanced or not
-  const checkBracketBalanced = (expr) => {
-    let stack = [];
-    for (let i = 0; i < expr.length; i++) {
-      let x = expr[i];
-      if (x === "(") {
-        stack.push(x);
-        continue;
-      }
-
-      if (x === ")") {
-        if (stack.length === 0) return false;
-        else stack.pop();
-      }
-    }
-    return stack.length === 0;
-  };
-
   const calculateAns = () => {
     if (input === "") return;
     let result = 0;
@@ -94,31 +76,11 @@ function Calculator() {
     finalexpression = finalexpression.replaceAll("x", "*");
     finalexpression = finalexpression.replaceAll("÷", "/");
 
-    // evaluate square root
-    let noSqrt = input.match(/√[0-9]+/gi);
-
-    if (noSqrt !== null) {
-      let evalSqrt = input;
-      for (let i = 0; i < noSqrt.length; i++) {
-        evalSqrt = evalSqrt.replace(
-          noSqrt[i],
-          `sqrt(${noSqrt[i].substring(1)})`
-        );
-      }
-      finalexpression = evalSqrt;
-    }
     try {
-      // check brackets are balanced or not
-      if (!checkBracketBalanced(finalexpression)) {
-        const errorMessage = { message: "Brackets are not balanced!" };
-        throw errorMessage;
-      }
       result = evaluate(finalexpression); //mathjs
     } catch (error) {
       result =
-        error.message === "Brackets are not balanced!"
-          ? "Brackets are not balanced!"
-          : "Invalid Input!!"; //error.message;
+        "Invalid Input!"
     }
     isNaN(result) ? setAnswer(result) : setAnswer(round(result, 3));
   }
