@@ -5,6 +5,7 @@ import Buttons from "./Button";
 import Display from "./Display";
 import SunIcon from "./icons/SunIcon";
 import MoonIcon from "./icons/MoonIcon";
+import Navbar from "./Navbar";
 
 
 function Calculator() {
@@ -101,14 +102,16 @@ function Calculator() {
 
 
   return(
-    <div className={"container " + theme} >
+  <> 
+  <Navbar/>
+    <div className={"container-calc " + theme} >
       <div className="switch" >
-      <SunIcon/>
-      <label className="toggle-switch">
-        <input type="checkbox" checked={isToggled} onChange={onToggle} />
-        <span className="switch" />
-      </label>
-      <MoonIcon/>  
+        <SunIcon/>
+        <label className="toggle-switch">
+          <input type="checkbox" checked={isToggled} onChange={onToggle} />
+          <span className="switch" />
+        </label>
+        <MoonIcon/>  
       </div>
       <div className="main">
         <Display input={input} setInput={setInput} answer={answer}/>
@@ -121,6 +124,8 @@ function Calculator() {
         />
       </div>
     </div>
+    </>
+   
   )
 
 }
