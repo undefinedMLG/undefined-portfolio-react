@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./styles/style.scss";
 import Slider from "react-slick";
 import data from "./datas/data.json";
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 import {BsPersonFill, BsTelephoneFill, BsFillBrushFill, BsGeoAltFill} from "react-icons/bs";
 
 

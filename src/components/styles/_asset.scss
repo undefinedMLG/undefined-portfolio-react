@@ -33,7 +33,7 @@
   .toggle-switch .switch {
     position: absolute;
     cursor: pointer;
-    background-color: #b6b6b6;
+    background-color: #fff;
     border-radius: 25px;
     top: 0;
     right: 0;
@@ -82,6 +82,12 @@ $b-image:url(../images/background-top-text.png);
 
 // LIGHT THEME
 .light {
+  .switch {
+    svg {
+      color: white;
+    }
+  }  
+
   // Display
   .display {
     background: #F1F2F3;
@@ -122,6 +128,11 @@ $b-image:url(../images/background-top-text.png);
 
 // DARK THEME
 .dark {
+  .switch {
+    svg {
+      color: white;
+    }
+  }  
   // Display
   .display {
     background: #17171c;
