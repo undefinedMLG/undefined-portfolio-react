@@ -1,87 +1,3 @@
-@mixin buttonLightTheme {
-  &{
-    background-color: #F1F2F3;
-    .btn{
-      background-color:white;
-      &:hover{
-        background-color: #FF8F00;
-        color: white;
-        transition: background-color 0.2s ease;
-      }&:active {
-        background-color: #FF8F00;
-        color: white;
-        transition: background-color 0.2s ease;
-      }
-    }
-  }
-  .clr {
-    color:#252525;
-  }
-  .exp {
-   color: white;
-    background-color: #4B5EFC;
-  }
-  .op{
-    background-color: #D2D3DA;
-  }
-  }
-  
-@mixin buttonDarkTheme {
-  & {
-    background-color: #17171C;
-    .btn{
-      background-color:#2E2F38;
-      color: white;
-      &:hover{
-        background-color: #FF8F00;
-        color: white;
-        transition: background-color 0.2s ease;
-      }&:active {
-        background-color: #FF8F00;
-        color: white;
-        transition: background-color 0.2s ease;
-      }
-    }
-  }
-  .clr {
-    color:#252525;
-    color: white;
-  }
-  .exp {
-    color: white;
-    background-color: #4B5EFC;
-  }
-  .op{
-    background-color: #4E505F;
-  }
-  }
-
-@mixin displayLightTheme{
-  &{
-    background: #F1F2F3;
-  }
-  &,&{
-    color: #252525;
-    ::placeholder{
-      color: #252525;
-
-    }
-  }
-}
-
-@mixin displayDarkTheme{
-  &{
-    background: #17171C;
-  }
-  &,&{
-    color: #ffffff;
-    ::placeholder{
-      color: #ffffff;
-
-    }
-  }
-}
-
 @mixin switch {
   .toggle-switch {
     position: relative;
@@ -124,14 +40,88 @@
   }
 }
 
-
 .light {
   // Display
   .display {
     background: #F1F2F3;
-  }
-
-  .input, .value {
     color: #252525;
   }
+
+  .value {
+    color: #878787;
+  }
+
+  .input {
+    color: #252525;
+  }
+
+  .input, .value::placeholder {
+    color: #252525;
+  }
+
+  // Button
+  .show-btn {
+    background-color: #F1F2F3;
+
+    .btn:hover {
+      background-color: #ff8f00;
+      color: white;
+    }&:active {
+      background-color: #ff8f00;
+      color: white;
+    }
+
+    .exp {
+      color: white;
+       background-color: #4B5EFC;
+     }
+     .op{
+       background-color: #D2D3DA;
+     }
+
+  }  
+}
+
+.dark {
+  // Display
+  .display {
+    background: #17171c;
+  }
+
+  .value {
+    color: #878787;
+  }
+
+  .input {
+    color: #fff;
+  }
+
+  .input, .value::placeholder {
+    color: #fff;
+  }
+
+  // Buttons
+  .show-btn {
+    background-color: #17171c;
+    color: white;
+
+    .btn {
+      background-color: #2E2F38;
+      color: white;
+    }
+
+    .btn:hover {
+      background-color: #ff8f00;
+      color: white;
+    }
+
+    .exp {
+      color: white;
+       background-color: #4B5EFC;
+     }
+     .op{
+       background-color: #4e505f;
+     }
+  } 
+
 }

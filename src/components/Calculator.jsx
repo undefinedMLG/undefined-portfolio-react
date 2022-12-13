@@ -3,7 +3,6 @@ import { round, evaluate } from "mathjs";
 import "./styles/Calculator.scss";
 import Buttons from "./Button";
 import Display from "./Display";
-import Switch from "./Switch";
 import SunIcon from "./icons/SunIcon";
 import MoonIcon from "./icons/MoonIcon";
 
@@ -91,17 +90,18 @@ function Calculator() {
 
   // THEME
   const [isToggled, setIsToggled] = useState(false)
+  const [theme, setTheme] = useState('light');
   
   const onToggle = () => {
     setIsToggled(!isToggled);
-    console.log(isToggled)
+    setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
 
 
 
   return(
-    <div className="container">
+    <div className={"container " + theme} >
       <div className="switch" >
       <SunIcon/>
       <label className="toggle-switch">

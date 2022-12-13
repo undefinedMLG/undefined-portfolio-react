@@ -19,6 +19,7 @@
     border-radius: 24px;
     border: 0px;
     background-color: white;
+    color: #252525;
     &:hover{
       background-color: #FF8F00;
       color: white;
@@ -29,9 +30,7 @@
       transition: background-color 0.2s ease;
     }
   }
-  .clr {
-    color:#252525;
-  }
+
   .exp {
    color: white;
     background-color: #4B5EFC;
