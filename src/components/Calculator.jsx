@@ -3,6 +3,9 @@ import { round, evaluate } from "mathjs";
 import "./styles/Calculator.scss";
 import Buttons from "./Button";
 import Display from "./Display";
+import Switch from "./Switch";
+import SunIcon from "./icons/SunIcon";
+import MoonIcon from "./icons/MoonIcon";
 
 
 function Calculator() {
@@ -86,8 +89,27 @@ function Calculator() {
   }
 
 
+  // THEME
+  const [isToggled, setIsToggled] = useState(false)
+  
+  const onToggle = () => {
+    setIsToggled(!isToggled);
+    console.log(isToggled)
+  };
+
+
+
+
   return(
     <div className="container">
+      <div className="switch" >
+      <SunIcon/>
+      <label className="toggle-switch">
+        <input type="checkbox" checked={isToggled} onChange={onToggle} />
+        <span className="switch" />
+      </label>
+      <MoonIcon/>  
+      </div>
       <div className="main">
         <Display input={input} setInput={setInput} answer={answer}/>
         <Buttons

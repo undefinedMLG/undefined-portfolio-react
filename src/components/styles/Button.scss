@@ -1,61 +1,4 @@
-
-@mixin lightTheme {
-&{
-  background-color: #F1F2F3;
-  .btn{
-    background-color:white;
-    &:hover{
-      background-color: #FF8F00;
-      color: white;
-      transition: background-color 0.2s ease;
-    }&:active {
-      background-color: #FF8F00;
-      color: white;
-      transition: background-color 0.2s ease;
-    }
-  }
-}
-.clr {
-  color:#252525;
-}
-.exp {
- color: white;
-  background-color: #4B5EFC;
-}
-.op{
-  background-color: #D2D3DA;
-}
-}
-
-@mixin blackTheme {
-  &{
-    background-color: #17171C;
-    .btn{
-      background-color:#2E2F38;
-      color: white;
-      &:hover{
-        background-color: #FF8F00;
-        color: white;
-        transition: background-color 0.2s ease;
-      }&:active {
-        background-color: #FF8F00;
-        color: white;
-        transition: background-color 0.2s ease;
-      }
-    }
-  }
-  .clr {
-    color:#252525;
-    color: white;
-  }
-  .exp {
-   color: white;
-    background-color: #4B5EFC;
-  }
-  .op{
-    background-color: #4E505F;
-  }
-  }
+@import "./__Assets.scss";
 
 .show-btn {
   display: grid;
@@ -65,7 +8,7 @@
   padding:20px;
   padding-bottom:40px;
   
-  @include lightTheme;
+  @include buttonLightTheme();
  
   .btn {
     width:72px;
