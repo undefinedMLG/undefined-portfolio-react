@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./styles/style.scss";
 import Slider from "react-slick";
 import data from "./datas/data.json";
-import {BsArrowRight, BsArrowLeft, BsPersonFill, BsTelephoneFill, BsFillBrushFill, BsGeoAltFill} from "react-icons/bs";
+import {BsPersonFill, BsTelephoneFill, BsFillBrushFill, BsGeoAltFill} from "react-icons/bs";
 
 
 class Default extends Component {
@@ -95,14 +95,14 @@ class Carousel extends Component {
               </div>
               <div class="carousel-btn">
                 <button id="slick-next" className="button" onClick={this.next}>
-                  Next <BsArrowRight/>
+                  Next <i class="fa-solid fa-arrow-right"></i>
                 </button>
                 <button
                   id="slick-previous"
                   className="button"
                   onClick={this.previous}
                 >
-                  <BsArrowLeft/> Prev
+                  <i class="fa-solid fa-arrow-left"></i> Prev
                 </button>
               </div>
             </div>

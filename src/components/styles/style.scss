@@ -281,8 +281,9 @@ nav {
         padding: 4px 16px;
         width: 70%;
         text-align: center;
-        
-       
+        i {
+          margin-left: 0.8rem;
+        }
       }
       :hover {
         opacity: 80%;

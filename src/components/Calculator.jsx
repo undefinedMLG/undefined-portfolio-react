@@ -101,7 +101,7 @@ function Calculator() {
 
 
   return(
-    <div className={"container " + theme} >
+    <div className={"container-calc " + theme} >
       <div className="switch" >
       <SunIcon/>
       <label className="toggle-switch">

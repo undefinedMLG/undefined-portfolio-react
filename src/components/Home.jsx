@@ -4,7 +4,6 @@ import fotbar from "./images/fotbar.png";
 import data from "./datas/data.json";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import {BsArrowRight} from "react-icons/bs";
 
 class Home extends Component {
   render() {
@@ -98,7 +97,7 @@ class Aboutus extends Component {
           <img src={fotbar} alt="" class="fotbar" />
           <a href="/detail">
             Show Details
-            <BsArrowRight />
+            <i class="fa-solid fa-arrow-right-long"></i>
           </a>
         </div>
         <div class="aboutus-content">
